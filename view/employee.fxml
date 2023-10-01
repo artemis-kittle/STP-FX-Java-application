@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox styleClass="background" fx:controller="controller.EmployeeController"  xmlns:fx="http://javafx.com/fxml/1">
+    
+    <HBox alignment="CENTER_LEFT" >
+        <padding>
+        <Insets bottom="1" left="70" right="70" top="1"/>
+        </padding>
+    <Label text="   Personal Details"   styleClass="label-h2" alignment="TOP_LEFT" />
+    </HBox>
+    <HBox alignment="CENTER" spacing="10" >
+         <padding>
+        <Insets bottom="1" left="70" right="70" top="1"/>
+        </padding>
+     <GridPane alignment="CENTER" hgap="5" vgap="10">
+         
+        
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField text='' fx:id="nameTf" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="emailTf" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField text="" fx:id="phoneTf" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField text="" fx:id="addressTf" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        
+   <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+     </GridPane>
+            
+    </HBox>   
+    <Separator></Separator>  
+    <HBox alignment="CENTER_LEFT" >
+         <padding>
+        <Insets bottom="1" left="70" right="70" top="1"/>
+        </padding>
+        <Label   text="  Employment Details" styleClass="label-h2"  alignment="TOP_LEFT" />
+    </HBox>
+       <HBox alignment="CENTER" spacing="10"  >
+            <padding>
+        <Insets bottom="0" left="70" right="70" top="1"/>
+        </padding>
+           
+           <GridPane alignment="CENTER" hgap="5" vgap="10">
+        <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+        
+        <Label text="TFN:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField text="" fx:id="tfnTf" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Paid Hours:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField text="" fx:id="hoursTf" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Hourly Rate:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField text="" fx:id="hourrateTf" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label text="Job Type:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField text="" fx:id="typeTf" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+           
+           </GridPane>
+        </HBox>
+    
+    <HBox spacing="10" alignment="CENTER"  >
+         <padding>
+        <Insets bottom="10" left="90" right="90" top="0"/>
+        </padding>
+        <Button text="Add" fx:id="addBtn"   onAction="#handleAdd"  />
+        <Button text="Update" fx:id="updateBtn"    onAction="#handleUpdate"/>
+        <Button text="Close" fx:id="closeBtn" onAction="#handleClose" />
+        
+    </HBox>
+    <stylesheets>
+		<URL value="@stpfx.css" />
+    </stylesheets>  
+    
+    
+</VBox>

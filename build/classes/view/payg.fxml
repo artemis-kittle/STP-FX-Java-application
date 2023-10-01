@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox  fx:controller="controller.PaygController" 
+       xmlns:fx="http://javafx.com/fxml/1" styleClass="background">
+    <HBox alignment="TOP_LEFT">
+        <padding>
+        <Insets bottom="0" left="10" right="10" top="20"/>
+        </padding>
+      <Label text="PAYG Annual Report:" styleClass="label-h2" alignment="CENTER" />  
+    </HBox>
+    
+    <GridPane vgap="10" hgap="10"  alignment="CENTER" >
+         <padding>
+        <Insets bottom="0" left="10" right="10" top="10"/>
+        </padding>
+            <Label text= "Weekly Paid Hours:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Text  fx:id="weeklyTf" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+            <Label text= "Hourly Pay Rate:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Text  fx:id="hourlyTf" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+      
+            <Label text= "Gross Income:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Text  fx:id="grossTf" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+           
+            <Label text= "TAX Rate:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <Text  fx:id="taxRateTf" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        
+            <Label text= "Net Income:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Text  fx:id="netIncomeTf" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    
+            <Label text= "Deduction:" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <Text  fx:id="deductionTf" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+         
+            <Label text= "Superannuation:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Text  fx:id="superTf" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    
+            <Label text= "Super Rate:" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <Text  fx:id="superRateTf" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                
+    </GridPane>
+    
+    <HBox alignment="CENTER" prefHeight="100" prefWidth="100"  >
+        <Button text ="Close" onAction="#handleClose" />
+    </HBox>
+    
+    <stylesheets>
+		<URL value="@stpfx.css" />
+    </stylesheets>  
+    
+</VBox>
